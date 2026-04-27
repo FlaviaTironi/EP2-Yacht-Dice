@@ -50,3 +50,10 @@ def calcula_pontos_soma(lista):
     for n in lista:
         soma += n
     return soma
+
+def calcula_pontos_sequencia_baixa(lista):
+    if (1 in lista and 2 in lista and 3 in lista and 4 in lista) or (2 in lista and 3 in lista and 4 in lista and 5 in lista) or (3 in lista and 4 in lista and 5 in lista and 6 in lista):
+        valor = 15
+    else:
+        valor = 0
+    return valor
