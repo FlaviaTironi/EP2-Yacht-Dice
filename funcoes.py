@@ -36,13 +36,13 @@ def remover_dado(lista_rolados,lista_guardados,n):
     rolados_final =[]
 
     i =0
-    for y in lista_guardados:
+    for y in lista_rolados:
         rolados_final.append(y)
         
     for x in lista_guardados:
         if i == n:
             rolados_final.append(x)
-        else:
+        if i !=n:
             estoque_final.append(x)
     
     final.append(rolados_final)
