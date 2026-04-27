@@ -11,15 +11,21 @@ def rolar_dados(n):
 
 def guardar_dado(dados_rolados,dados_no_estoque,dado_para_guardar):
     lista_final = []
-    
+    estoque = []
     rolados = []
-    for x in dados_rolados:
-        if x in dados_no_estoque:
-            rolados.append(x)
+    
+    for x in dados_no_estoque:
+        estoque.append(x)
 
-    dados_no_estoque.append(dados_rolados[dado_para_guardar])
+    i = 0 
+    for y in dados_rolados:
+        if i == dado_para_guardar:
+            estoque.append(y)
+        else:
+            rolados.append(y)
+        i += 1
     
     lista_final.append(rolados)
-    lista_final.append(dados_no_estoque)
+    lista_final.append(estoque)
     
     return lista_final
