@@ -9,7 +9,7 @@ def rolar_dados(n):
         i += 1
     return lista
 
-def guarda_dado(dados_rolados,dados_no_estoque,dado_para_guardar):
+def guardar_dado(dados_rolados,dados_no_estoque,dado_para_guardar):
     lista_final = []
     
     dado_para_guardar = i
