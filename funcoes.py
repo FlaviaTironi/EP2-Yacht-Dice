@@ -8,3 +8,14 @@ def rolar_dados(n):
         lista.append(numero)
         i += 1
     return lista
+
+def guarda_dado(dados_rolados,dados_no_estoque,dado_para_guardar))
+    lista_final = []
+    
+    dado_para_guardar = i
+    dados_no_estoque.append(dados_rolados[i])
+    
+    lista_final.append(dados_no_estoque)
+    lista_final.append(dados_rolados)
+    
+    return lista_final
