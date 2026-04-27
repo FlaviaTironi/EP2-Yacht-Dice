@@ -29,3 +29,22 @@ def guardar_dado(dados_rolados,dados_no_estoque,dado_para_guardar):
     lista_final.append(estoque)
     
     return lista_final
+
+def remover_dado(lista_rolados,lista_guardados,n):
+    final = []
+    estoque_final = []
+    rolados_final =[]
+
+    i =0
+    for y in lista_guardados:
+        rolados_final.append(y)
+        
+    for x in lista_guardados:
+        if i == n:
+            rolados_final.append(x)
+        else:
+            estoque_final.append(x)
+    
+    final.append(rolados_final)
+    final.append(estoque_final)
+    return final
