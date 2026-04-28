@@ -122,3 +122,25 @@ def calcula_pontos_quadra(dados):
     
     return resultado 
 
+def calcula_pontos_quina(dados):
+    repetições = {}
+    soma = 0
+
+    for d in dados:
+        if d in repetições:
+            repetições[d] += 1
+        else:
+            repetições[d] = 1
+
+    cinco = False
+    for valor in repetições.values():
+        if valor >= 5:
+            cinco = True
+    
+    if cinco: 
+        resultado = 50
+    else:
+        resultado = 0
+    
+    return resultado 
+
