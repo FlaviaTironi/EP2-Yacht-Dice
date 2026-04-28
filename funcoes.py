@@ -65,3 +65,34 @@ def calcula_pontos_sequencia_alta(lista):
         valor = 0
     
     return valor
+
+def calcula_pontos_full_house(dados):
+    numeros = []
+    primeiro = 0
+    segundo = 0
+    soma = 0 
+
+    for d in dados:
+        soma += d 
+
+    for d in dados:
+        if d not in numeros:
+            numeros.append(d)
+        
+    for d in dados:
+        if len(numeros) == 1:
+            primeiro = 5
+            segundo = 5
+        else:
+            if d == numeros[0]:
+                primeiro += 1
+            if d == numeros[1]:
+                segundo += 1
+        
+
+    if (primeiro == 3 and segundo == 2) or (primeiro == 2 and segundo == 3):
+        resultado = soma
+    else:
+        resultado = 0
+    
+    return resultado
