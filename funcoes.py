@@ -154,4 +154,15 @@ def calcula_pontos_regra_avancada(lista_5_num):
 
     return dic
 
+def faz_jogada(lista_dados, categoria, dic_cartela):
+    regra_simples = [1, 2, 3, 4, 5, 6]
+
+    if categoria in regra_simples or categoria in ['1','2','3','4','5','6']:
+        cat_int = int(categoria)
+        resultado = calcula_pontos_regra_simples(lista_dados)
+        dic_cartela["regra_simples"][cat_int] = resultado[cat_int]
+    else:
+        resultado = calcula_pontos_regra_avancada(lista_dados)
+        dic_cartela["regra_avancada"][categoria] = resultado[categoria]
     
+    return dic_cartela
