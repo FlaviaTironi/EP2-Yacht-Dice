@@ -121,3 +121,4 @@ def calcula_pontos_quadra(dados):
         resultado = 0
     
     return resultado 
+
