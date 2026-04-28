@@ -96,3 +96,28 @@ def calcula_pontos_full_house(dados):
         resultado = 0
     
     return resultado
+
+def calcula_pontos_quadra(dados):
+    repetições = {}
+    soma = 0 
+
+    for d in dados:
+        soma += d 
+
+    for d in dados:
+        if d in repetições:
+            repetições[d] += 1
+        else:
+            repetições[d] = 1
+
+    quadra = False
+    for valor in repetições.values():
+        if valor >= 4:
+            quadra = True
+    
+    if quadra: 
+        resultado = soma
+    else:
+        resultado = 0
+    
+    return resultado 
