@@ -144,3 +144,14 @@ def calcula_pontos_quina(dados):
     
     return resultado 
 
+def calcula_pontos_regra_avancada(lista_5_num):
+    dic = {'cinco_iguais': calcula_pontos_quina(lista_5_num),
+    'full_house': calcula_pontos_full_house(lista_5_num),
+    'quadra': calcula_pontos_quadra(lista_5_num),
+    'sem_combinacao': calcula_pontos_soma(lista_5_num),
+    'sequencia_alta': calcula_pontos_sequencia_alta(lista_5_num),
+    'sequencia_baixa': calcula_pontos_sequencia_baixa(lista_5_num)}
+
+    return dic
+
+    
